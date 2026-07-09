@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>La Forge du Chartiste</title>
+</head>
+<body>
+<h1>Mes lectures</h1>
+<ul>
+    {% for livre in livres %}
+    <li>{{ livre.titre }} — {{ livre.auteur }}</li>
+    {% empty %}
+    <li>Aucun livre pour le moment.</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
